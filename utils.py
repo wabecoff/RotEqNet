@@ -9,7 +9,7 @@ import torch
 def ntuple(n):
     """ Ensure that input has the correct number of elements """
     def parse(x):
-        if isinstance(x, collections.Iterable):
+        if isinstance(x, collections.abc.Iterable):
             return x
         return tuple(itertools.repeat(x, n))
     return parse
